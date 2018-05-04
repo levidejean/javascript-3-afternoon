@@ -31,7 +31,20 @@
 
 //Code Here
 
+class Employee{
+  constructor(first_name, last_name, email, age){
+    this.first_name = first_name;
+    this.last_name = last_name;
+    this.email = email;
+    this.age = age;
+  }
+  
+  
+   makeWidget(){
+  return this.first_name + " " + this.last_name + " " + "Widget";
+}
 
+};
 
 ////////// PROBLEM 2 //////////
 
@@ -50,6 +63,40 @@
 */
 
 //Code Here
+// var reports = [];
+// class Manager extends Employee {
+//   constructor(hire, fire){
+//     this.hire = hire;
+//     this.fire = fire;
+//   }
+//     hire(){
+//       return this.hire(reports.push(this.first_name));
+//     }
+//   }
+
+class Manager extends Employee {
+  //constructor
+  constructor(firstName, lastName, email, age) {
+    super(); // exception thrown here when not called
+    this.reports = [];
+    this.first_name = firstName;
+    this.last_name = lastName;
+    this.email = email;
+    this.age = age;
+  }
+
+  //methods
+  hire(employee) {
+    this.reports.push(employee);
+  }
+
+  fire(index) {
+    this.reports.splice(index, 1);
+  }
+
+}
+
+
 
 
 
