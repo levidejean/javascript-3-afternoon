@@ -7,40 +7,47 @@
 */
 
 /*
-  First we'll look at the difference between accessing property values in a for in loop and accessing the property name in a for in loop.
-  In the example below, we are accessing the property values. Uncomment the code below, run it and look at what prints in the console.
+  First we'll look at the difference between accessing property values in a 
+  for in loop and accessing the property name in a for in loop.
+  In the example below, we are accessing the property values. Uncomment the 
+  code below, run it and look at what prints in the console.
 */
 
-// var values = {
-//   one: 'These',
-//   two: ' are',
-//   three: ' the',
-//   four: ' property',
-//   five: ' values.'
-// } 
+var values = {
+  one: 'These',
+  two: ' are',
+  three: ' the',
+  four: ' property',
+  five: ' values.'
+} 
 
-// for(var key in values) {
-//   console.log(values[key])
-// }
+for(var key in values) {
+  console.log(values[key])
+}
 
 /*
-  In this next example, we are accessing the property names themselves. Uncomment the code below, run it and look at what prints in the console.
+  In this next example, we are accessing the property names themselves. 
+  Uncomment the code below, run it and look at what prints in the console.
 */
 
-// for(var key in values) {
-//   console.log(key)
-// }
+for(var key in values) {
+  console.log(key)
+}
 
 
 
 ////////// PROBLEM 1 //////////
 
 /*
-  Inside the function showValues, write a for in loop that concatenates each of the property values and returns the concatenated string.
+  Inside the function showValues, write a for in loop that concatenates each 
+  of the property values and returns the concatenated string.
 */
 
 function showValues( obj ) {
-  //Code Here
+  var newString = "";
+  for(var key in values){
+    return newString.push(values[key] += values[key]); 
+  }
 }
 
 
@@ -49,25 +56,37 @@ function showValues( obj ) {
 
 /*
   Write a function called greaterThan10 that takes in an object. 
-  Write a for in loop that loops over the object and changes any value that is great than 10 to 0. 
-  Return the updated object.
+  Write a for in loop that loops over the object and changes any value that 
+  is great than 10 to 0. Return the updated object.
 */
 
 //Code Here
 
-
+function greaterThan10(obj){
+  newObj = {};
+  for(i=0;i<obj.length;i++){
+    if(obj[i]>10){
+      newObj.push(obj[i] = 0);
+    }
+  }
+}
 
 ////////// PROBLEM 3 //////////
 
 /*
   Write a function called double that takes in an object.
-  Write a for in loop that loops over the object and changes every value to be itself multipled by 2.
+  Write a for in loop that loops over the object and changes every value to 
+  be itself multipled by 2.
   Return the updated object.
 */
 
 //Code Here
 
-
+function double(obj){
+  for(var key in obj){
+    return obj[key] * 2;
+  }
+}
 
 ////////// PROBLEM 4 //////////
 
@@ -81,23 +100,27 @@ function showValues( obj ) {
 
 //Code Here
 
+function secrets(obj){
+  var emptyString = [];
 
+}
 
 /* 
   Sometimes it's needed to delete object properties. 
-  All you need is the word delete before a reference to the object property value. 
-  Uncomment the example below to see a for in loop deleting all the properties inside an object.
+  All you need is the word delete before a reference to the object property
+   value. Uncomment the example below to see a for in loop deleting all the 
+   properties inside an object.
 */
 
-// var deleteAllThethings = {
-//   one: 1,
-//   two: 2,
-//   three: 3
-// }
+var deleteAllThethings = {
+  one: 1,
+  two: 2,
+  three: 3
+}
 
-// for(var key in deleteAllThethings) {
-//   delete deleteAllThethings[key]
-// }
+for(var key in deleteAllThethings) {
+  delete deleteAllThethings[key]
+}
 
 // console.log(deleteAllThethings)
 
@@ -112,7 +135,9 @@ function showValues( obj ) {
 
 //Code Here
 
-
+function removePassword(obj){
+  delete password[key];
+}
 
 ////////// PROBLEM 6 //////////
 
@@ -126,12 +151,15 @@ var deleteTheBigNumbers = {
 // Do not edit the code above.
 
 /*
-  Write a for in loop that deletes every property from the object deleteTheBigNumbers whose value is greater than 100.
+  Write a for in loop that deletes every property from the object 
+  deleteTheBigNumbers whose value is greater than 100.
 */
 
 //Code Here
 
-
+for(var key in deleteTheBigNumbers){
+  delete deleteTheBigNumbers[key] > 100;
+}
 
 ////////// PROBLEM 7 //////////
 
@@ -144,14 +172,18 @@ var deleteTheBigNumbers = {
 
 //Code Here
 
+function startsWithK(obj){
+  for(var key in startsWithK);
 
+}
 
 ////////// PROBLEM 8 //////////
 
 /*
   Write a function called hiddenTreasure that takes in an object.
-  Write a for in loop that loops over this object. Each property will have a sentence as it's value.
-  If the property value does not contain the word 'treasure', delete the property.
+  Write a for in loop that loops over this object. Each property will have a 
+  sentence as it's value.If the property value does not contain the word 
+  'treasure', delete the property.
   Return the updated object.
 
   (hint: the method includes() may be of use...)
@@ -159,4 +191,6 @@ var deleteTheBigNumbers = {
 
 //Code Here
 
-
+function hiddenTreasure(obj){
+  
+}

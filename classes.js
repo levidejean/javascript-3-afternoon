@@ -124,7 +124,51 @@ class Manager extends Employee {
 
 //Code Here
 
+class ProgressiveManager extends Manager {
+  constructor() {
+    super();
+    this.title = "Not a manager";
+    this.bonus = 0;
+  }
 
+  fire(index) {
+    this.bonus += 100;
+    super.fire(index);
+  }
+  
+  
+//   0 : Not a manager
+//     1-3 : Barely Manager
+//     4-10 : Mostly Manager
+//     11-50 : Manager
+//     51-100 : Manager Plus
+//     101+ : Bestest Manager
+  
+  
+  hire(employee) {
+    var myLen = this.reports.length;
+    if (myLen === 0) {
+      this.title = "Not a manager";
+    }
+    else if (1 <= myLen && myLen <=3) {
+      this.title = "Barely Manager";
+    }
+    else if (4 <= myLen && myLen <=10) {
+      this.title = "Mostly Manager";
+    }
+    else if (11 <= myLen && myLen <=50) {
+      this.title = "Manager";
+    }
+    else if (51 <= myLen && myLen <=100) {
+      this.title = "Manager Plus";
+    }
+    else if (101 <= myLen) {
+      this.title = "Bestest Manager";
+    }
+		super.hire(employee);  
+	}
+
+}
 
 ////////// PROBLEM 4 - Black Diamond //////////
 

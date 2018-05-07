@@ -1,5 +1,6 @@
 /*
-  Once you complete a problem, refresh ./destructuring.html in your browser and check to see if the problem's test(s) are passing.
+  Once you complete a problem, refresh ./destructuring.html in your browser 
+  and check to see if the problem's test(s) are passing.
   Passed tests will be indicated by a green circle.
   Failed tests will be indicated by a red X.
 
@@ -18,24 +19,32 @@ var carDetails = {
 // Do not edit the code above.
 
 /*
-  Use object destructuring to save the property values from the object carDetails into new variables. 
+  Use object destructuring to save the property values from the object 
+  carDetails into new variables. 
 */
 
 //Code Here
 
-
+carDetails, color = 'red';
+carDetails, make = 'toyota';
+carDetails, model = 'tacoma';
+carDetails, year = 1994;
 
 ////////// PROBLEM 2 //////////
 
 /*
-  In the function below named greeting, it is receiving an object as a parameter. 
-  Use object destructuring to save the object properties to new variables. 
-  The property names are firstName, lastName, and title.
+  In the function below named greeting, it is receiving an object as a 
+  parameter. Use object destructuring to save the object properties to new
+   variables. The property names are firstName, lastName, and title.
 */
 
 function greeting( obj ) {
   //Code Here
   
+  var greeting, firstName = 'Levi';
+  var greeting, lastName = 'DeJean';
+  var greeting, title = 'Sir';
+
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -55,8 +64,13 @@ function greeting( obj ) {
 
 //Code Here
 
-
-
+function totalPopulation(obj){
+  utah: 1;
+  california:2;
+  texas:3;
+  arizona:4
+}
+totalPopulation, utah = 14;
 ////////// PROBLEM 4 //////////
 
 /*
@@ -69,33 +83,50 @@ function greeting( obj ) {
 
 //Code Here
 
-
+function ingredients (obj){
+  carb: "";
+  fat: "";
+  protien: ""
+}
 
 ////////// PROBLEM 5 //////////
 
 /*
-  Now we will use object destructuring as the function's parameter instead of destructuring the object inside of the function declaration.
+  Now we will use object destructuring as the function's parameter instead of
+   destructuring the object inside of the function declaration.
   Example:
     function example( {one, two, three} ) {
       return one + two + three
     }
 
-  Write a function called largeNumbers that will take a destructured object as it's parameter.
-  The object properties will be named first, second, and third and their values will be numbers.
-  Find the smallest number of the three and return that number.
+  Write a function called largeNumbers that will take a destructured object as 
+  it's parameter. The object properties will be named first, second, and third 
+  and their values will be numbers. Find the smallest number of the three and 
+  return that number.
 */
 
 //Code Here
 
-
+function largeNumbers(first, second, third){
+  first: 1;
+  second: 2;
+  third: 3
+}
 
 ////////// PROBLEM 6 //////////
 
 /*
-  Write a function called numberGroups that will take a destructured object as it's parameter.
-  The object properties will be named a, b, and c and their values will be arrays of numbers.
-  Find the longest array and return that array.
+  Write a function called numberGroups that will take a destructured object as
+   it's parameter. The object properties will be named a, b, and c and their 
+   values will be arrays of numbers.Find the longest array and return that 
+   array.
 */
+
+function numberGroups(a, b, c,){
+  a: [];
+  b: [];
+  c: []
+}
 
 //Code Here
 
