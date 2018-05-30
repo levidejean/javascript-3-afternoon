@@ -40,11 +40,9 @@ carDetails, year = 1994;
 
 function greeting( obj ) {
   //Code Here
-  
-  var greeting, firstName = 'Levi';
-  var greeting, lastName = 'DeJean';
-  var greeting, title = 'Sir';
-
+  var firstName = obj.firstName;
+  var lastName = obj.lastName;
+  var title = obj.title;
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -64,13 +62,15 @@ function greeting( obj ) {
 
 //Code Here
 
-function totalPopulation(obj){
-  utah: 1;
-  california:2;
-  texas:3;
-  arizona:4
+
+
+function totalPopulation(obj) {
+  var utah = obj.utah;
+	var texas = obj.texas;
+	var california = obj.california;
+	var arizona = obj.arizona;
+  return utah+texas+california+arizona;
 }
-totalPopulation, utah = 14;
 ////////// PROBLEM 4 //////////
 
 /*
@@ -82,13 +82,16 @@ totalPopulation, utah = 14;
 */
 
 //Code Here
-
-function ingredients (obj){
-  carb: "";
-  fat: "";
-  protien: ""
+function ingredients(obj){
+var newArray = [];
+var carb = obj.carb;
+var fat = obj.fat;
+var protein = obj.protein;
+newArray.push(carb);
+newArray.push(fat);
+newArray.push(protein);
+return newArray;
 }
-
 ////////// PROBLEM 5 //////////
 
 /*
@@ -107,10 +110,8 @@ function ingredients (obj){
 
 //Code Here
 
-function largeNumbers(first, second, third){
-  first: 1;
-  second: 2;
-  third: 3
+function largeNumbers( {first, second, third} ){
+  return Math.min([first,second,third]);
 }
 
 ////////// PROBLEM 6 //////////
@@ -122,7 +123,7 @@ function largeNumbers(first, second, third){
    array.
 */
 
-function numberGroups(a, b, c,){
+function numberGroups({a, b, c,}){
   a: [];
   b: [];
   c: []

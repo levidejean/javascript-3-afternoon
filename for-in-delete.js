@@ -21,18 +21,18 @@ var values = {
   five: ' values.'
 } 
 
-for(var key in values) {
-  console.log(values[key])
-}
+// for(var key in values) {
+//   console.log(values[key])
+// }
 
 /*
   In this next example, we are accessing the property names themselves. 
   Uncomment the code below, run it and look at what prints in the console.
 */
 
-for(var key in values) {
-  console.log(key)
-}
+// for(var key in values) {
+//   console.log(key)
+// }
 
 
 
@@ -44,14 +44,14 @@ for(var key in values) {
 */
 
 function showValues( obj ) {
-  var newString = "";
-  for(var key in values){
-    return newString.push(values[key] += values[key]); 
+  var newValue = "";
+  for(var key in obj){
+		newValue+= obj[key];
   }
+  return newValue;
 }
 
-
-
+console.log(newValues);
 ////////// PROBLEM 2 //////////
 
 /*
@@ -63,13 +63,14 @@ function showValues( obj ) {
 //Code Here
 
 function greaterThan10(obj){
-  newObj = {};
-  for(i=0;i<obj.length;i++){
-    if(obj[i]>10){
-      newObj.push(obj[i] = 0);
+  for (var x in obj) {
+    if (obj[x]>10) {
+      obj[x] = 0;
     }
   }
+  return obj;
 }
+  
 
 ////////// PROBLEM 3 //////////
 
@@ -82,11 +83,7 @@ function greaterThan10(obj){
 
 //Code Here
 
-function double(obj){
-  for(var key in obj){
-    return obj[key] * 2;
-  }
-}
+
 
 ////////// PROBLEM 4 //////////
 
@@ -100,10 +97,7 @@ function double(obj){
 
 //Code Here
 
-function secrets(obj){
-  var emptyString = [];
 
-}
 
 /* 
   Sometimes it's needed to delete object properties. 
@@ -135,9 +129,7 @@ for(var key in deleteAllThethings) {
 
 //Code Here
 
-function removePassword(obj){
-  delete password[key];
-}
+
 
 ////////// PROBLEM 6 //////////
 
@@ -157,9 +149,7 @@ var deleteTheBigNumbers = {
 
 //Code Here
 
-for(var key in deleteTheBigNumbers){
-  delete deleteTheBigNumbers[key] > 100;
-}
+
 
 ////////// PROBLEM 7 //////////
 
@@ -172,10 +162,7 @@ for(var key in deleteTheBigNumbers){
 
 //Code Here
 
-function startsWithK(obj){
-  for(var key in startsWithK);
 
-}
 
 ////////// PROBLEM 8 //////////
 
@@ -191,6 +178,4 @@ function startsWithK(obj){
 
 //Code Here
 
-function hiddenTreasure(obj){
-  
-}
+
