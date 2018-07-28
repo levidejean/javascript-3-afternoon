@@ -31,7 +31,7 @@
 
 //Code Here
 
-class Employee{
+class Employee { 
   constructor(first_name, last_name, email, age){
     this.first_name = first_name;
     this.last_name = last_name;
@@ -194,5 +194,52 @@ class ProgressiveManager extends Manager {
 */
 
 //Code Here
+class machineFactory{
+  constructor(){
+      this.widget_made_count = 0;
+      this.wear_tear_count = 0;
+      this.needs_reboot = false;
+      this.has_increased_wearTear = 0;
+  }
 
+  makeWidgets(num) {
+      if(!this.needs_reboot){
+          this.widget_made_count += num;
+          this.has_increased_wearTear += num;
+          //Increase wear_tear by one for every 50 
+          if(this.has_increased_wearTear >= 50 && num < 50){
+              this.wear_tear_count++;
+              this.has_increased_wearTear -=50
+          }
+  
+          for(let i = 50; i <= num; i += 50){
+              this.wear_tear_count++;
+              this.has_increased_wearTear -=50
+          }
+      }else{
+          this.reboot()();
+      }
+  }
+
+  fixMachine() {
+      this.needs_reboot = true;
+  }
+
+  reboot () {
+      return () => {
+          this.wear_tear_count -=10
+          this.needs_reboot = false;
+      }
+  }
+}
+
+const superMachine = new machineFactory();
+
+superMachine.makeWidgets(10);
+console.log(superMachine)
+superMachine.makeWidgets(40);
+superMachine.fixMachine()
+console.log(superMachine)
+superMachine.reboot()()
+console.log(superMachine)
 

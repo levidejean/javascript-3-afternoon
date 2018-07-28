@@ -43,7 +43,7 @@ var values = {
   of the property values and returns the concatenated string.
 */
 
-function showValues( obj ) {
+function showValues ( obj ) {
   var newValue = "";
   for(var key in obj){
 		newValue+= obj[key];
@@ -62,7 +62,7 @@ console.log(newValues);
 
 //Code Here
 
-function greaterThan10(obj){
+function greaterThan10 (obj){
   for (var x in obj) {
     if (obj[x]>10) {
       obj[x] = 0;

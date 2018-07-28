@@ -110,7 +110,7 @@ return newArray;
 
 //Code Here
 
-function largeNumbers( {first, second, third} ){
+function largeNumbers ( {first, second, third} ){
   return Math.min([first,second,third]);
 }
 
